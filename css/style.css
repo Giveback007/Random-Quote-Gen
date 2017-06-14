@@ -1,0 +1,91 @@
+body {
+	background-color: ;
+}
+
+#main {
+	width: 60vw;
+	height: 60vh;
+	margin: 10% auto;
+	max-width: 600px;
+	min-width: 450px;
+}
+
+h1 {
+	text-align: center;
+	font-family: 'Crimson Text', serif;
+}
+
+h2 {
+	text-align: center;
+}
+
+#mark {
+	font-size: 80px;
+	line-height: 1em;
+	opacity: 0.2;
+}
+
+#quote-div {
+	min-height: 50px;
+}
+
+#quote {
+	font-family: 'Crimson Text', serif;
+	font-size: 2em;
+}
+
+#author-div {
+	min-height: 15px;
+}
+
+#author {
+	text-align: center;
+	font-size: 45px;
+	line-height: 1em;
+	opacity: 0.4;
+	min-height: 15px;
+		font-size: 25px;
+}
+
+#btn-play {
+	margin: 1%;
+}
+
+.btn-text {
+	font-size: 28px
+}
+
+@media only screen and (max-width: 450px) {
+	#main {
+		width: 100vw;
+		margin: 5vh auto;
+		min-width: 300px;
+	}
+	
+	h1 {
+		font-size: 8vw;
+	}
+	
+	h2 {
+		font-size: 20px;
+	}
+	
+	#mark {
+		font-size: 50px;
+		line-height: 1em;
+		opacity: 0.2;
+		margin-top: 10px;
+	}
+	
+	#quote {
+		font-size: 20px;
+	}
+	
+	#author {
+		
+	}
+	
+	#btn {
+		margin-left: 10px;
+	}
+}
