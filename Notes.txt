@@ -1,1 +1,1 @@
--Fix API / Currently Not Working
+-Do random color per quote with gradient

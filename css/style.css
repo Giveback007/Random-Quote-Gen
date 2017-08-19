@@ -3,7 +3,7 @@ body {
 }
 
 #main {
-	width: 60vw;
+	max-width: 550px;
 	height: 60vh;
 	margin: 10% auto;
 	max-width: 600px;
@@ -39,12 +39,11 @@ h2 {
 }
 
 #author {
-	text-align: center;
+	text-align: right;
 	font-size: 45px;
 	line-height: 1em;
 	opacity: 0.4;
 	min-height: 15px;
-		font-size: 25px;
 }
 
 #btn-play {
@@ -61,30 +60,30 @@ h2 {
 		margin: 5vh auto;
 		min-width: 300px;
 	}
-	
+
 	h1 {
 		font-size: 8vw;
 	}
-	
+
 	h2 {
 		font-size: 20px;
 	}
-	
+
 	#mark {
 		font-size: 50px;
 		line-height: 1em;
 		opacity: 0.2;
 		margin-top: 10px;
 	}
-	
+
 	#quote {
 		font-size: 20px;
 	}
-	
+
 	#author {
-		
+		font-size: 30px;
 	}
-	
+
 	#btn {
 		margin-left: 10px;
 	}

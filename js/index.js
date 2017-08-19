@@ -20,33 +20,32 @@ var btnChange = (function() {
 	};
 })();
 
+function animation(x) {
+	$("#quote, #author").hide(1000);
+	$("#quote").queue(function(n) {
+		$("#quote").hide().html(x.quote).show(2000);
+		$("#author").hide().html("<i>" + x.author + "</i>").delay(250).fadeIn(2000);
+		n();
+	}).delay(1000);
+}
+
 $("#btn-play").click(function() {
 	btnChange();
 
 	$(function() {
 		$.ajax({
-			url: 'https://andruxnet-random-famous-quotes.p.mashape.com/?cat=famous',
-			type: 'GET',
-			datatype: 'json',
-// ----
+			url: 'https://giveback007-random-quote-microservice.glitch.me/rand',
+			type: 'get',
+			dataType: "jsonp",
 			success: function(data) {
-				var a = JSON.parse(data);
-				$("#quote, #author").hide(1000);
-				$("#quote").queue(function(n) {
-					$("#quote").hide().html(a.quote).show(2000);
-					$("#author").hide().html("<i>" + a.author + "</i>").delay(2500).fadeIn(2000);
-					n();
-				}).delay(1000);
-				var quote = a.quote;
-				var author = a.author;
-				$('#tweet-btn').attr('href', "https://twitter.com/intent/tweet?text=" + quote + "%20-" + author);
-				console.log(quote, author)
+				console.log(data);
+				animation(data);
+
+				$('#tweet-btn').attr('href', "https://twitter.com/intent/tweet?text=" + data.quote + "%20-" + data.author);
+
 			},
 //---
-			error: function(err) { var a = (err); },
-			beforeSend: function(xhr) {
-				xhr.setRequestHeader("X-Mashape-Authorization", "exvrshy62omshQHYcMyYGdVisCIpp1QnSZajsnsSEmXQC6zE6m");
-			}
+			error: function(err) { var a = (err); }
 		});
 	});
 });
