@@ -41,7 +41,15 @@ $("#btn-play").click(function() {
 				console.log(data);
 				animation(data);
 
-				$('#tweet-btn').attr('href', "https://twitter.com/intent/tweet?text=" + data.quote + "%20-" + data.author);
+				var tweet = "https://twitter.com/intent/tweet?text=" + data.quote + "%20-" + data.author;
+
+				var splitTweet = tweet.split('');
+				for (var i = 0; i < tweet.length; i++) {
+					if (splitTweet[i] === ';') {splitTweet[i] = '%3B'}
+				}
+				tweet = splitTweet.join('');
+				
+				$('#tweet-btn').attr('href', tweet);
 
 			},
 //---
